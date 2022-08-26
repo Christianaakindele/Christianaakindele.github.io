@@ -1,19 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-        <link rel = "stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-<h1>Life in the wild</h1>
-<div class="container">
-    <img src="https://static.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg">
-    <img src="https://static.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg">
-    <img src="https://static.pexels.com/photos/213399/pexels-photo-213399.jpeg">
-    <img src="https://static.pexels.com/photos/158471/ibis-bird-red-animals-158471.jpeg">
-    <img src="https://static.pexels.com/photos/133459/pexels-photo-133459.jpeg">
-    <img src="https://static.pexels.com/photos/50988/ape-berber-monkeys-mammal-affchen-50988.jpeg">
-</div>
-      
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022frontend</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+        <a class="logo" href="#">Remember<span>That</span></a>
+        <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="open navigation" width=30px>
+
+        <nav>
+            <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="close navigation" width="30px">
+
+            <ul class="primary-nav">
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="#">features</a></li>
+                <li><a href="#">pricing</a></li>
+            </ul>
+            <ul class="secondary-nav">
+                <li><a href="#">contact</a></li>
+                <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+
+<section class="hero">
+    <div class="container">
+            <div class="left-col">
+                <p class="subhead"> IT's NITTY &amp; GRITTY </p>
+                <h1> A Task App That Doesn't Stink</h1>
+                <div class="hero-cta">
+                    <a href="#" class="primary-cta">Try for Free</a>
+                    <a href="#" class="watch-video-cta">
+                        <img src="images/watch.svg" alt="watch a video" width="30px"> watch a video
+                    </a>
+                </div>
+            </div>
+            <img src="images/illustration.svg"class="hero-image" alt="illustration">
+    </div>
+</section>
+<section class="features-section">
+    <div class="container">
+        <ul class="features-list">
+            <li>Unlimited Tasks</li>
+            <li>Sms Task Reminders</li>
+            <li>Confettti xplosions Upon Task Cmpletions</li>
+            <li>Social media Announcements</li>
+            <li>Real Time Collaboration</li>
+            <li>Other awesome features</li>
+        </ul>
+        <img src="images/holding-phone.jpg" alt="man holding phone">
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+
+        <ul>
+            <li>
+                <img src="images/person.jpg" alt="person">
+                <blockquote>Lorem ipsum dolor sit amet, consetetur
+                    Lorem ipsum dolor sit amet, consetetu
+                    Lorem ipsum dolor sit amet, consetetu</blockquote>
+                <cite>-Jane doe </cite>
+            </li>
+            <li>
+                <img src="images/person.jpg" alt="person">
+                <blockquote>Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet, consetetu
+                    Lorem ipsum dolor sit amet, consetetu</blockquote>
+                <cite>-Jane doe </cite>
+            </li>
+            <li>
+                <img src="images/person.jpg" alt="person">
+                <blockquote>Lorem ipsum dolor sit amet, consetetur Lorem ipsum dolor sit amet,
+                     consetetuLorem ipsum dolor sit amet, consetetu</blockquote>
+                <cite>-Jane doe </cite>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-left">
+            <h2>contact</h2>
+            <form action="">
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">EMAIL</label>
+                <input type="text" id="name" name="name">
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+            <input type="Submit" class="Send-message-cta" value="Send Message">
+
+            </form>
+        </div>
+        <div class="contact-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52871.82171378048!2d-118.4345533271583!3d34.08261502149153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1660823412467!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+
+
+    </div>
+
+</section>
+<script>
+    const mobileBtn = document.getElementById('mobile-cta')
+    nav = document.querySelector('nav')
+    mobileBtnExit = document.getElementById('mobile-exit');
+
+    mobileBtn.addEventListener('click', () => {
+        nav.classList.add('menu-btn');
+    })
+
+    mobileBtnExit.addEventListener('click', () => {
+        nav.classList.remove('menu-btn');
+    })
+    
+</script>
+
+</body>
 </html>
