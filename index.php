@@ -67,7 +67,7 @@
 	</head>
 	<body>
 	
-	<header id="fh5co-header" style="background-image: url(images/hero_bg_1.jpg)">
+	<header id="fh5co-header">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row" style="margin-top: 5em;">
@@ -78,9 +78,9 @@
 			<div class="row">
 				<div class="col-md-6 col-sm-6">
 					<div class="intro" style="margin-top: 50px;">
-						<h1 style="color: #fff;">Dear Parents</h1>
+						<h1 style="color: black;">Dear Parents</h1>
 						
-						<p style="margin-top: -10px;">It is understandable that parenting is not taught as a course before signing an agreement to become one.
+						<p style="margin-top: -10px; color: black;">It is understandable that parenting is not taught as a course before signing an agreement to become one.
 							 what makes you an exceptional mummy or daddy is your ability to look through the
 							 lens of your teenager and see from their perspective in other to know how to do it right.
 							 Life doesn't get easier as adulthood approaches but we live in a world 
@@ -93,7 +93,7 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6">
-					<figure class="fh5co-intro-img">
+					<figure class="fh5co-intro-img" style="margin-top: -100px;">
 						<img class="img-1 animate-box" src="images/newbook.png" alt="book">
 						<img class="img-2 animate-box" src=""i alt="">
 					</figure>
@@ -137,24 +137,24 @@
 					</div>
 				</div>
 				<div class="get-subscribe">
-					<form class="form-inline subForm"  action="" method="post">
+					<form class="form-inline subForm"  action="processor.php" method="post">
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
-								<input type="text" class="form-control" id="name" placeholder="Name">
+								<input type="text"  name="name" class="form-control" id="name" placeholder="Name">
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
+								<input type="email" name="email" class="form-control" id="email" placeholder="Email">
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
 							<button type="submit" class="btn btn-default btn-block">Subscribe</button>
 						</div>
 					</form>
-                    <p class="result"></p>
+                    <p class="result" style="color:black;"></p>
 				</div>
 			</div>
 		</div>
@@ -164,27 +164,31 @@
 				<div class="col-md-12 text-center">
 					<ul class="fh5co-social">
 
-						<li><a href="#"><i class="icon-facebook"></i></a></li>
-						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="#"><i class="icon-linkedin"></i></a></li>
-						<li><a href="#"><i class="icon-apple"></i></a></li>
+						<li><a href="https://www.facebook.com/xtiana.akindele"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://twitter.com/ChristianaAkin4/status/1399657812783943680?s=20&t=_0oKMuqyzeS5ty6CdqTLqQ"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/christiana-akindele-a365aa125"><i class="icon-linkedin"></i></a></li>
+						<li><a href="https://www.instagram.com/p/CiIWi1FsnCN/?igshid=MDJmNzVkMjY="><i class="icon-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>
 		</footer>
 	</div>
     <script type="text/javascript">
-		$(docment).ready(function(){
+		$(document).ready(function(){
 			$(".subForm").on("submit", function(e){
 				e.preventDefault();
 				$.ajax({
-					url: "processor.php",
-					method: "POST",
-					data: new FormData(this),
-					contentType: false,
-					processData: false,
+					url:'processor.php',
+					method:'POST',
+					data:new FormData(this),
+					contentType:false,
+					processData:false,
 					success:function(data){
+						if(data == "You have successfully subscribed"){
+							$(".subForm")[0].reset();
+						}
 						$(".result").html(data);
+						
 					}
 				});
 			});
