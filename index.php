@@ -62,6 +62,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+    <script src="js/jquery.min.js"></script>
 
 	</head>
 	<body>
@@ -136,7 +137,7 @@
 					</div>
 				</div>
 				<div class="get-subscribe">
-					<form class="form-inline subForm" action="" method="post">
+					<form class="form-inline subForm"  action="" method="post">
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
@@ -153,7 +154,7 @@
 							<button type="submit" class="btn btn-default btn-block">Subscribe</button>
 						</div>
 					</form>
-					<p class="result"></p>
+                    <p class="result"></p>
 				</div>
 			</div>
 		</div>
@@ -163,19 +164,16 @@
 				<div class="col-md-12 text-center">
 					<ul class="fh5co-social">
 
-						<li><a href="https://www.facebook.com/xtiana.akindele"><i class="icon-facebook"></i></a></li>
-						<li><a href="https://twitter.com/ChristianaAkin4/status/1399657812783943680?s=20&t=_0oKMuqyzeS5ty6CdqTLqQ"><i class="icon-twitter"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/christiana-akindele-a365aa125"><i class="icon-linkedin"></i></a></li>
-						<li><a href="https://www.instagram.com/p/CiIWi1FsnCN/?igshid=MDJmNzVkMjY="><i class="icon-instagram"></i></a></li>
-						
-						
-						
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon-apple"></i></a></li>
 					</ul>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script type="text/javascript">
+    <script type="text/javascript">
 		$(docment).ready(function(){
 			$(".subForm").on("submit", function(e){
 				e.preventDefault();
